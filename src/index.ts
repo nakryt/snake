@@ -7,7 +7,9 @@ import usersRoutes from "./routes/usersRoutes";
 const app = express();
 
 const PORT = 5000;
-const MONGODBURL = process.env.MONGODBURL || "";
+const MONGODBURL =
+  process.env.MONGODBURL ||
+  "mongodb+srv://nakryt:z3zl3in4@cluster0.yk3c7.azure.mongodb.net/snake?retryWrites=true&w=majority";
 
 app.use(express.urlencoded());
 app.use(express.json());

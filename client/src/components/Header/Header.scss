@@ -1,19 +1,21 @@
+@import "src/style/colors";
+
 .header {
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 1rem;
-  background-color: #000;
+  background-color: $header-background;
 
   a {
     margin-right: 2rem;
     text-decoration: none;
     font-size: 1.2rem;
-    color: #fff;
+    color: $header-text;
   }
 
   a.active {
-    color: #ffff00;
+    color: $header-active-link;
   }
 }
