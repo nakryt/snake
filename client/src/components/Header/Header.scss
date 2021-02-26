@@ -1,0 +1,19 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  background-color: #000;
+
+  a {
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  a.active {
+    color: #ffff00;
+  }
+}

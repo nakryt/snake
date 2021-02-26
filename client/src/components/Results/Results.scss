@@ -1,0 +1,19 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .results__item {
+    padding: 1rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

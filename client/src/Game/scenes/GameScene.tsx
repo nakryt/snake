@@ -51,8 +51,6 @@ export class GameScene extends Phaser.Scene {
       }
     }
 
-    this.snake?.updateGrid(testGrid);
-
     const validLocations = [];
 
     for (let y = 0; y < 38; y++) {

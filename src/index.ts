@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import path from "path";
 import resultsRoute from "./routes/resultsRoute";
+import usersRoutes from "./routes/usersRoutes";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use("/", express.static(path.join(__dirname, "../public")));
 
+app.use("/users", usersRoutes);
 app.use("/results", resultsRoute);
 
 const start = async () => {

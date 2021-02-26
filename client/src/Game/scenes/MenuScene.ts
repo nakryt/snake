@@ -1,3 +1,6 @@
+import Phaser from "phaser";
+import { setResult } from "../../api/resultAPI";
+
 interface MenuData {
   score?: number;
 }
@@ -19,7 +22,8 @@ export class MenuScene extends Phaser.Scene {
           fontFamily: "'Geostar Fill', cursive",
         })
         .setOrigin(0)
-        .setText(`Score: ${data.score}`);
+        .setText(`High scores: ${data.score}`);
+      setResult(data.score);
     }
   }
 

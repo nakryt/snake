@@ -1,8 +1,6 @@
 import Phaser from "phaser";
 import { Food } from "./Food";
 
-type Sprite = Phaser.GameObjects.Sprite;
-
 enum Direction {
   UP,
   DOWN,
@@ -141,15 +139,6 @@ export class Snake extends Phaser.Physics.Arcade.Sprite {
       return true;
     }
     return false;
-  }
-
-  updateGrid(grid: boolean[][]) {
-    this.objectBody.children.each((segment) => {
-      // const bx = (segment as Sprite).x / 16;
-      // const by = (segment as Sprite).y / 16;
-      // if (grid) grid[by][bx] = false;
-    });
-    return grid;
   }
 
   getIsAlive() {

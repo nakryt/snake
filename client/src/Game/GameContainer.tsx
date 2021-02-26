@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Game from "./Game";
 
-class GameContainer extends Component {
-  constructor(props: any) {
+class GameContainer extends Component<{}, {}> {
+  constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -11,7 +11,7 @@ class GameContainer extends Component {
   }
 
   componentDidMount() {
-    this.setState({ game: new Game(this) });
+    this.setState({ game: new Game() });
   }
 
   componentDidUpdate() {

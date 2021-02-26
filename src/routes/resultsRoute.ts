@@ -28,6 +28,7 @@ resultsRoute.post("/", async (req: ResultRequest, res) => {
 
     if (!user) {
       const newUser = new User({
+        id,
         username,
         scores,
       });
@@ -42,7 +43,7 @@ resultsRoute.post("/", async (req: ResultRequest, res) => {
 
     if (isNaN(newScores))
       return res
-        .status(401)
+        .status(400)
         .json({ error: true, message: "Wrong scores value." });
 
     user.scores += newScores;
