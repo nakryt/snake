@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { setResult } from "../../api/resultAPI";
+import TweenHelper from "../helpers/TweenHelper";
 
 interface MenuData {
   score?: number;
@@ -48,5 +49,6 @@ export class MenuScene extends Phaser.Scene {
     this.button.on("pointerdown", () => {
       this.scene.start("GameScene");
     });
+    TweenHelper.flashElement(this, this.button);
   }
 }
